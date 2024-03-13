@@ -11,7 +11,7 @@ import Resume from './components/Resume'
 
 export default function Routing() {
    return (
-      <MainRouter basename="/my-resume">
+      <MainRouter>
          <Routes >
             <Route path='/' element={<Main />} >
                <Route index element={<Home />} />
