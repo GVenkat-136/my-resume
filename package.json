@@ -1,7 +1,7 @@
 {
   "name": "my-resume",
   "version": "0.1.0",
-  "homepage": "https://gvenkat-136.github.io/My-Protfolio",
+  "homepage": "https://GVenkat-136.github.io/My-Protfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
