@@ -27,7 +27,11 @@ export default function Main() {
                <Outlet />
             </div>
             <div className='Footer'>
-               Footer
+               <div className='Footer_wrapper'>
+                  <li>G.venkataNarendra</li>
+                  <li>Hyderabad</li>
+                  <li>dev.gvnarendra@gmail.com</li>
+               </div>
             </div>
          </div>
       </div>

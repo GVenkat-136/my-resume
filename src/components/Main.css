@@ -2,7 +2,7 @@
    --Theme: #72f57e;
 }
 
-/* Main Content Css */
+/*---------------- Main-Content Css --------------------------*/
 .container {
    width: 100%;
    height: 100vh;
@@ -15,19 +15,19 @@
 }
 
 .header {
-   flex-basis: 10%;
+   flex-basis: 8%;
 }
 
 .content {
-   flex-basis: 80%;
+   flex-basis: 86%;
 }
 
 .Footer {
-   flex-basis: 10%;
+   flex-basis: 6%;
 }
 
-/*  Header Css */
-
+/*---------------- END Main-Content Css --------------------------*/
+/* --------------------------------  Header Css -----------------------*/
 .Header_wrapper {
    display: flex;
    flex-direction: row;
@@ -51,18 +51,208 @@
 }
 
 .list {
+   height: 100%;
    display: flex;
+   align-items: center;
    gap: 20px;
    font-size: 18px;
 }
 
 .list>a {
+   height: 100%;
+   display: flex;
+   align-items: center;
    text-decoration: none;
    color: #141313;
 }
 
 .isActive {
-   text-decoration: underline !important;
    font-weight: bolder;
-   transition: text-decoration 2s ease-in-out;
+   background-color: #72f57e;
+   padding: 0px 10px 0px 10px;
+   color: #fff !important;
 }
+
+/* -------------------------------- END-HeaderCss -----------------------*/
+
+/* ----------------- Footer-Css------------ */
+.Footer_wrapper {
+   display: flex;
+   flex-direction: row;
+   gap: 25px;
+   justify-content: flex-end;
+   align-items: end;
+   padding: 0px 30px 0px 30px;
+}
+
+.Footer_wrapper>li {
+   cursor: pointer;
+   font-size: 15px;
+}
+
+/* -------------------------------- Home-Page Css -----------------------*/
+.Home_container {
+   height: 100%;
+}
+
+.Home_wrapper {
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.Home_content {
+   flex-basis: 56%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.content_wrapper {
+   width: 78%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 27px;
+}
+
+.Home_image {
+   flex-basis: 45%;
+}
+
+.Home_image>img {
+   width: 100%;
+}
+
+.content_wrapper>h2,
+h1,
+h4 {
+   padding: 0px !important;
+   margin: 0px !important;
+}
+
+.content_wrapper>h2,
+h1 {
+   font-size: 30px;
+   font-weight: bolder;
+   text-transform: capitalize;
+   letter-spacing: 3px;
+}
+
+.content_wrapper>h1 {
+   font-size: 40px;
+   color: var(--Theme);
+}
+
+.summary {
+   font-size: 18px;
+   text-align: justify;
+   line-height: 34px;
+   text-transform: capitalize;
+}
+
+.Buttons {
+   width: 100%;
+   display: flex;
+   gap: 20px;
+}
+
+.Buttons>button {
+   width: 30%;
+   padding: 20px;
+   font-size: 18px;
+   text-transform: capitalize;
+   background-color: #72f57e;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.Black_button {
+   background-color: #141313 !important;
+   color: #fff;
+}
+
+/* -------------------------------- END Home-Page Css -----------------------*/
+
+/* -------------------------------- SKills-page Css -----------------------*/
+
+.Skills_container {
+   height: 100%;
+}
+
+.skills_wrapper {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   height: 100%;
+   align-items: center;
+   gap: 20px;
+   padding: 0px 30px 0px 30px;
+}
+
+.card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #ffffff;
+   width: 230px;
+   height: 270px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.card .percent {
+   position: relative;
+}
+
+.card svg {
+   position: relative;
+   width: 150px;
+   height: 150px;
+   transform: rotate(-90deg);
+}
+
+.card svg circle {
+   width: 100%;
+   height: 100%;
+   fill: none;
+   stroke: #f0f0f0;
+   stroke-width: 7;
+   stroke-linecap: round;
+}
+
+.card svg circle:last-of-type {
+   stroke-dasharray: 471px;
+   stroke-dashoffset: calc(471px - (471px * var(--percent)) / 100);
+   /* stroke: #3498db; */
+}
+
+.card .number {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.card .number img {
+   width: 100%;
+}
+
+.card .number h3 {
+   font-weight: 200;
+   font-size: 3.5rem;
+}
+
+.card .number h3 span {
+   font-size: 2rem;
+}
+
+.card .title h2 {
+   margin: 25px 0 0;
+}
+
+/* -------------------------------- END SKills-page Css -----------------------*/
