@@ -1,5 +1,8 @@
 :root {
-   --Theme: #72f57e;
+   --Theme: #4caf4f;
+   --border-color: #c8c6c6;
+   --white: #fff;
+   --black: #141313;
 }
 
 /*---------------- Main-Content Css --------------------------*/
@@ -16,6 +19,7 @@
 
 .header {
    flex-basis: 8%;
+   border-bottom: 0.5px solid var(--border-color);
 }
 
 .content {
@@ -24,6 +28,7 @@
 
 .Footer {
    flex-basis: 6%;
+   border-top: 0.5px solid var(--border-color);
 }
 
 /*---------------- END Main-Content Css --------------------------*/
@@ -35,19 +40,18 @@
    justify-content: space-between;
    align-items: center;
    padding: 0px 30px 0px 30px;
-   border-bottom: 0.5px solid #ccc9c9;
 }
 
 .Logo {
    font-size: 23px;
-   color: #72f57e;
+   color: var(--Theme);
    font-weight: bold;
    letter-spacing: 2px;
 }
 
 .Logo>span {
    font-size: 30px;
-   color: #141313;
+   color: var(--black);
 }
 
 .list {
@@ -63,25 +67,26 @@
    display: flex;
    align-items: center;
    text-decoration: none;
-   color: #141313;
+   color: var(--black);
 }
 
 .isActive {
    font-weight: bolder;
-   background-color: #72f57e;
+   background-color: var(--Theme);
    padding: 0px 10px 0px 10px;
-   color: #fff !important;
+   color: var(--white) !important;
 }
 
 /* -------------------------------- END-HeaderCss -----------------------*/
 
 /* ----------------- Footer-Css------------ */
 .Footer_wrapper {
+   height: 100%;
    display: flex;
    flex-direction: row;
    gap: 25px;
    justify-content: flex-end;
-   align-items: flex-end;
+   align-items: center;
    padding: 0px 30px 0px 30px;
 }
 
@@ -163,7 +168,7 @@ h1 {
    padding: 20px;
    font-size: 18px;
    text-transform: capitalize;
-   background-color: #72f57e;
+   background-color: var(--Theme);
    border: none;
    border-radius: 10px;
    cursor: pointer;
@@ -171,8 +176,8 @@ h1 {
 }
 
 .Black_button {
-   background-color: #141313 !important;
-   color: #fff;
+   background-color: var(--black) !important;
+   color: var(--white);
 }
 
 /* -------------------------------- END Home-Page Css -----------------------*/
@@ -185,12 +190,93 @@ h1 {
 
 .skills_wrapper {
    display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
    height: 100%;
    align-items: center;
-   gap: 20px;
-   padding: 0px 30px 0px 30px;
+}
+
+.Skills_nav {
+   width: 100%;
+   flex-basis: 15%;
+   height: 100%;
+   border-right: 0.5px solid var(--border-color);
+}
+
+.nav_wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   align-items: center;
+}
+
+.nav_wrapper>li {
+   width: 100%;
+   height: 100%;
+   list-style: none;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   text-transform: capitalize;
+   border-bottom: 0.5px solid var(--border-color);
+   cursor: pointer;
+   letter-spacing: 1px;
+}
+
+.nav_wrapper:last-child {
+   border: none !important;
+}
+
+.nav_wrapper>li>span {
+   width: 100%;
+   justify-self: center;
+   padding: 0px 0px 0px 12px;
+}
+
+.nav_wrapper>li:hover {
+   background-color: var(--Theme);
+   color: var(--black);
+}
+
+
+
+
+.Skille_content {
+   flex-basis: 95%;
+   height: 100%;
+}
+
+.Skill_Conent_wrapper {
+   height: 85%;
+   display: flex;
+   flex-direction: row;
+}
+
+.Content_title {
+   height: 10%;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   padding: 0px;
+   border-bottom: 1px solid var(--border-color);
+}
+
+.Content_title>span {
+   width: 95%;
+   padding: 10px;
+   font-size: 40px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   /* border: 1px solid var(--border-color); */
+   border-radius: 10px;
+   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+
+}
+
+.Card_wrapper {
+   flex-basis: 30%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .card {
@@ -198,11 +284,11 @@ h1 {
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   background-color: #ffffff;
-   width: 230px;
-   height: 270px;
+   background-color: var(--white);
+   margin: 0 20px;
+   width: 300px;
+   height: 390px;
    border-radius: 5px;
-   cursor: pointer;
 }
 
 .card .percent {
@@ -211,8 +297,8 @@ h1 {
 
 .card svg {
    position: relative;
-   width: 150px;
-   height: 150px;
+   width: 250px;
+   height: 250px;
    transform: rotate(-90deg);
 }
 
@@ -220,15 +306,14 @@ h1 {
    width: 100%;
    height: 100%;
    fill: none;
-   stroke: #f0f0f0;
-   stroke-width: 7;
+   stroke: var(--border-color);
+   stroke-width: 10;
    stroke-linecap: round;
 }
 
 .card svg circle:last-of-type {
-   stroke-dasharray: 471px;
-   stroke-dashoffset: calc(471px - (471px * var(--percent)) / 100);
-   /* stroke: #3498db; */
+   stroke-dasharray: 750px;
+   stroke-dashoffset: calc(750px - (750px * var(--percent)) / 100);
 }
 
 .card .number {
@@ -238,21 +323,35 @@ h1 {
    transform: translate(-50%, -50%);
 }
 
-.card .number img {
+.number>img {
    width: 100%;
 }
 
-.card .number h3 {
-   font-weight: 200;
-   font-size: 3.5rem;
-}
-
-.card .number h3 span {
-   font-size: 2rem;
-}
-
 .card .title h2 {
+   font-size: 2rem;
+   letter-spacing: 2px;
    margin: 25px 0 0;
+}
+
+
+.Card_content {
+   flex-basis: 70%;
+}
+
+.Contnet_List {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 2rem;
+   font-size: 18px;
+   padding: 30px 15px 0px 0px;
+}
+
+.Contnet_List>li {
+   line-height: 28px;
+   text-align: justify;
 }
 
 /* -------------------------------- END SKills-page Css -----------------------*/
