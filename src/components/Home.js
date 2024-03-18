@@ -18,7 +18,7 @@ export default function Home() {
                </div>
             </div>
             <div className='Home_image'>
-               <img src='/assets/Home.png' alt='home' />
+               <img src='/assets/Home.svg' alt='home' />
             </div>
          </div>
       </div>

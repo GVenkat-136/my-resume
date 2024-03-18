@@ -127,6 +127,7 @@
 }
 
 .Home_image>img {
+   margin-top: 50px !important;
    width: 100%;
 }
 
